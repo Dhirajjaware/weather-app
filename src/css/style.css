@@ -1,0 +1,33 @@
+body {
+  background-image: url('https://images.pexels.com/photos/2114014/pexels-photo-2114014.jpeg?cs=srgb&dl=pexels-magda-ehlers-2114014.jpg&fm=jpg');
+  background-size: cover;
+}
+
+.weather__celsius {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.weather__img {
+  width: 100px;
+}
+
+.weather__container {
+  /* background-color: #393646; */
+  color: #fff;
+  height: 100vh;
+  transition: opacity all 1s;
+}
+
+.weather__container > .col {
+  padding: 3rem;
+}
+
+main {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+nav {
+  background-color: #fef2f4;
+}
