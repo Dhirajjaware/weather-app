@@ -43,10 +43,6 @@ class WeatherView {
         <div class="col text-center">
           <h2 class="Weather__city">${data.name},${state}</h2>
           <p>Now</p>
-          <img src = "/src/img/sun.png"
-            class="weather__img"
-            "alt="weather-img"
-          />
           <h1 class="weather__celsius">${temp.toFixed(0)}°c</h1>
           <h4 class="weather__celsius-feels">Feels like ${feels_like.toFixed(
             0
