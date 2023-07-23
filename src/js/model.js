@@ -12,6 +12,7 @@ const loadCity = async function (query) {
       `${API_URL_GEO}${query}&limit=&appid=${API_KEY}`
     );
 
+    //We are mutating state instead of returning data from this is function
     state.city = data.map(city => {
       return {
         name: city.name,

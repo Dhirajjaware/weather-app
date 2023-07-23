@@ -23,9 +23,30 @@ const controlWeather = async function () {
   }
 };
 
+const controlDefaultCityWeather = async function () {
+  try {
+    navigator.geolocation.getCurrentPosition(
+      async position => {
+        const { latitude: lat, longitude: lon } = position.coords;
+
+        await model.loadWeather({ lat, lon });
+
+        WeatherView.render(model.state.weather)
+      },
+      reject => {
+        console.log(reject);
+      }
+    );
+  } catch (err) {
+    throw err;
+  }
+};
+
 const init = function () {
   WeatherView.addHandlerRender(controlWeather);
   //focus on input field
   WeatherView.focus();
+
+  controlDefaultCityWeather();
 };
 init();

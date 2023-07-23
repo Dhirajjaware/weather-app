@@ -34,7 +34,8 @@ class WeatherView {
     this.#weatherContainer.style.opacity = 1;
   }
 
-  render(data, state) {
+  render(data, state = '') {
+    console.log(data);
     const { temp, feels_like } = data.main;
     const { speed } = data.wind;
     const [weather] = data.weather;
@@ -65,4 +66,5 @@ class WeatherView {
   }
 }
 
+//We are creating instance of weather class
 export default new WeatherView();
