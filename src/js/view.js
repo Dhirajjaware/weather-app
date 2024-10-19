@@ -35,7 +35,7 @@ class WeatherView {
   }
 
   render(data, state = '') {
-    console.log(data);
+    // console.log(data);
     const { temp, feels_like } = data.main;
     const { speed } = data.wind;
     const [weather] = data.weather;
